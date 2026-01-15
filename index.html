@@ -1,12 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD231</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WDD231 | Course Home</title>
+  <meta name="description" content="WDD231 course home page with responsive navigation, dynamic footer, and course filtering." />
+  <meta name="author" content="Olalemi" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/modern-normalize/modern-normalize.css">
+
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
 </head>
 <body>
-    <h1>Welcome to WDD231</h1>
-    <h5>Testing</h5>
+  <header class="site-header">
+    <div class="branding">
+      <img src="images/logo.svg" alt="Site logo" width="40" height="40" />
+      <span class="site-name">Olalemi</span>
+    </div>
+
+    <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      
+      <span class="bar" aria-hidden="true"></span>
+      <span class="bar" aria-hidden="true"></span>
+      <span class="bar" aria-hidden="true"></span>
+    </button>
+
+    <nav id="primary-nav" class="nav">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="chamber/">Chamber</a></li>
+        <li><a href="final/">Final</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <section class="intro">
+      <h2>Welcome</h2>
+      <p>Building a responsive, accessible course home page with clean semantics, strong contrast, and smooth navigation.</p>
+    </section>
+
+    <section class="certificate">
+      <h2>Certificate courses</h2>
+
+      <div class="filters" role="group" aria-label="Course filters">
+        <button class="filter-btn" data-filter="all">All Courses</button>
+        <button class="filter-btn" data-filter="wdd">WDD Courses</button>
+        <button class="filter-btn" data-filter="cse">CSE Courses</button>
+      </div>
+
+      <p class="credits"><strong>Total credits:</strong> <span id="credit-total">0</span></p>
+
+      <div id="course-grid" class="course-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="resources">
+      <h2>Resources</h2>
+      <ul class="resource-list">
+        <li><a href="https://developer.chrome.com/docs/devtools/" target="_blank" rel="noopener">DevTools</a></li>
+        <li><a href="https://web.dev/measure/" target="_blank" rel="noopener">Lighthouse</a></li>
+        <li><a href="https://fonts.google.com/" target="_blank" rel="noopener">Google Fonts</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="social">
+      <a href="https://github.com/olaxemax/wdd231" aria-label="GitHub">GitHub</a>
+      <a href="https://www.linkedin.com/in/olalemi-emmanuel-4b90b965/" aria-label="LinkedIn">LinkedIn</a>
+      <a href="https://twitter.com/@coded_01" aria-label="Twitter">Twitter</a>
+    </div>
+
+    <p class="legal">
+      <span>&copy;</span>
+      <span id="currentyear"></span>
+      <span>Olalemi</span>
+      <span>— Lagos, Nigeria</span>
+    </p>
+
+    <p id="lastModified" class="last-modified"></p>
+  </footer>
 </body>
 </html>

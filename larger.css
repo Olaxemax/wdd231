@@ -1,0 +1,38 @@
+/* Larger viewports (required: contains a media query) */
+@media (min-width: 700px) {
+  .menu-toggle {
+    display: none; /* hide hamburger on larger screens */
+  }
+
+  .nav {
+    display: block; /* show horizontal nav */
+  }
+
+  .nav ul {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  .intro, .certificate, .resources {
+    padding: 1.25rem;
+  }
+
+  .course-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .course-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .resource-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
