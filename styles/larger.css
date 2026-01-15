@@ -10,8 +10,10 @@
 
   .nav ul {
     display: flex;
-    gap: 0.5rem;
     align-items: center;
+  }
+  .nav li + li {
+    margin-left: 0.5rem; /* spacing instead of gap */
   }
 
   main {
@@ -25,13 +27,11 @@
   .course-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
-@media (min-width: 700px) {
   .about-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 2rem;
+    column-gap: 2rem;
     align-items: start;
   }
 
@@ -49,6 +49,7 @@
   }
 
   .resource-list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* three columns at large desktop */
+    gap: 0.5rem;
   }
 }

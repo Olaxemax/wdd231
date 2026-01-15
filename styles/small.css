@@ -1,16 +1,16 @@
 :root {
-  --bg: #0f172a;       
-  --panel: #111827;    
-  --text: #e5e7eb;     
-  --muted: #9ca3af;     
-  --accent: #22c55e;   
+  --bg: #0f172a;
+  --panel: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #22c55e;
   --accent-contrast: #052e14;
-  --completed: #0ea5e9; 
+  --completed: #0ea5e9;
 }
 
-*,
-*::before,
-*::after { box-sizing: border-box; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 html, body {
   height: 100%;
@@ -24,14 +24,18 @@ body {
   line-height: 1.6;
 }
 
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+}
 
 .site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
   padding: 0.75rem 1rem;
   background: var(--panel);
   position: sticky;
@@ -42,7 +46,9 @@ a:hover { text-decoration: underline; }
 .branding {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+}
+.branding > * + * {
+  margin-left: 0.75rem;
 }
 
 .site-name {
@@ -53,41 +59,39 @@ a:hover { text-decoration: underline; }
 .menu-toggle {
   display: inline-flex;
   flex-direction: column;
-  gap: 4px;
   background: transparent;
   border: 1px solid var(--muted);
   border-radius: 6px;
   padding: 6px;
   cursor: pointer;
 }
-
 .menu-toggle .bar {
   width: 22px;
   height: 2px;
   background: var(--text);
-  display: block;
+  margin: 2px 0;
 }
 
 .nav {
-  display: none; 
+  display: none;
 }
-
 .nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
+.nav li + li {
+  margin-top: 0.5rem;
+}
 .nav a {
   display: block;
   padding: 0.5rem 0.75rem;
   border-radius: 6px;
+  transition: background 160ms ease;
 }
-
-.nav a:hover {
+.nav a:hover, .nav a:focus {
   background: var(--accent);
   color: var(--accent-contrast);
-  transition: background 160ms ease;
 }
 
 main {
@@ -102,7 +106,7 @@ h1, h2 {
 
 .intro, .certificate, .resources {
   background: var(--panel);
-  border: 1px solid #1f2937; 
+  border: 1px solid #1f2937;
   border-radius: 12px;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -110,9 +114,11 @@ h1, h2 {
 
 .filters {
   display: flex;
-  gap: 0.5rem;
   flex-wrap: wrap;
   margin-bottom: 0.5rem;
+}
+.filters .filter-btn + .filter-btn {
+  margin-left: 0.5rem;
 }
 
 .filter-btn {
@@ -123,8 +129,7 @@ h1, h2 {
   padding: 0.4rem 0.75rem;
   cursor: pointer;
 }
-
-.filter-btn:hover {
+.filter-btn:hover, .filter-btn:focus {
   border-color: var(--accent);
   color: var(--accent);
 }
@@ -134,13 +139,11 @@ h1, h2 {
 }
 
 .about-container {
-  display: block; 
+  display: block;
 }
-
 .about-text {
   margin-bottom: 1rem;
 }
-
 .about-photo img {
   max-width: 100%;
   height: auto;
@@ -163,12 +166,10 @@ h1, h2 {
   align-items: start;
   gap: 0.5rem;
 }
-
 .course-card h3 {
   margin: 0;
   font-size: 1rem;
 }
-
 .course-meta {
   color: var(--muted);
   font-size: 0.9rem;
@@ -183,7 +184,6 @@ h1, h2 {
   border: 1px solid var(--muted);
   color: var(--muted);
 }
-
 .badge.completed {
   border-color: var(--completed);
   color: var(--completed);
@@ -206,8 +206,10 @@ h1, h2 {
 
 .social {
   display: flex;
-  gap: 0.75rem;
   flex-wrap: wrap;
+}
+.social a + a {
+  margin-left: 0.75rem;
 }
 
 .legal, .last-modified {
