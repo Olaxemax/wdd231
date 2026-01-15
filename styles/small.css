@@ -1,11 +1,11 @@
 :root {
-  --bg: #0f172a;        /* slate-900 */
-  --panel: #111827;     /* gray-900 */
-  --text: #e5e7eb;      /* gray-200 */
-  --muted: #9ca3af;     /* gray-400 */
-  --accent: #22c55e;    /* green-500 */
+  --bg: #0f172a;       
+  --panel: #111827;    
+  --text: #e5e7eb;     
+  --muted: #9ca3af;     
+  --accent: #22c55e;   
   --accent-contrast: #052e14;
-  --completed: #0ea5e9; /* sky-500 */
+  --completed: #0ea5e9; 
 }
 
 *,
@@ -69,7 +69,7 @@ a:hover { text-decoration: underline; }
 }
 
 .nav {
-  display: none; /* hidden on small screens until toggled */
+  display: none; 
 }
 
 .nav ul {
@@ -102,7 +102,7 @@ h1, h2 {
 
 .intro, .certificate, .resources {
   background: var(--panel);
-  border: 1px solid #1f2937; /* gray-800 */
+  border: 1px solid #1f2937; 
   border-radius: 12px;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -134,7 +134,7 @@ h1, h2 {
 }
 
 .about-container {
-  display: block; /* stack by default */
+  display: block; 
 }
 
 .about-text {
@@ -215,7 +215,6 @@ h1, h2 {
   font-size: 0.9rem;
 }
 
-/* Accessibility helpers */
 [aria-current="page"] {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
