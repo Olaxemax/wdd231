@@ -26,6 +26,24 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+,
+@media (min-width: 700px) {
+  .about-container {
+    display: flex;            /* side by side */
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .about-text, .about-photo {
+    flex: 1;                  /* equal width */
+  }
+
+  .about-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+}
 
 @media (min-width: 1024px) {
   .course-grid {
