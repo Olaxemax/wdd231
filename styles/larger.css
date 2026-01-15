@@ -28,22 +28,20 @@
 }
 ,
 @media (min-width: 700px) {
-  .about-container {
-    display: flex;            /* side by side */
-    align-items: flex-start;
+  .about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     gap: 2rem;
-  }
-
-  .about-text, .about-photo {
-    flex: 1;                  /* equal width */
+    align-items: start;
   }
 
   .about-photo img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
   }
-}
+}}
 
 @media (min-width: 1024px) {
   .course-grid {
