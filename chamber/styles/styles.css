@@ -1,0 +1,116 @@
+:root {
+  --primary: #004466;
+  --secondary: #0099cc;
+  --light: #f4f4f4;
+  --dark: #333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: var(--light);
+  color: var(--dark);
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  position: relative;
+}
+
+#menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+#navLinks {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+#navLinks li {
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a.active {
+  border-bottom: 2px solid var(--secondary);
+}
+
+.view-toggle {
+  margin: 1rem;
+  text-align: center;
+}
+
+#members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.member-card {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+}
+
+.member-card img {
+  max-width: 100px;
+  height: auto;
+}
+
+.list-view .member-card {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.list-view .member-card img {
+  margin-right: 1rem;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  #menuBtn {
+    display: block;
+  }
+
+  #navLinks {
+    display: none;
+    flex-direction: column;
+    background: var(--primary);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  #navLinks.show {
+    display: flex;
+  }
+
+  #navLinks a {
+    padding: 1rem;
+    border-top: 1px solid var(--secondary);
+  }
+}

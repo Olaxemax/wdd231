@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamber of Commerce Directory</title>
+  <meta name="description" content="Business Directory for Chamber of Commerce">
+  <meta name="author" content="Olalemi Emmanuel">
+
+  <!-- Social Meta -->
+  <meta property="og:title" content="Chamber of Commerce Directory">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/social-preview.png">
+  <meta property="og:url" content="https://olaxemax.io/chamber/directory.html">
+
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <h1>My City Chamber of Commerce</h1>
+    <nav>
+      <button id="menuBtn" aria-label="Menu">&#9776;</button>
+      <ul id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="view-toggle">
+      <button id="gridBtn">Grid View</button>
+      <button id="listBtn">List View</button>
+    </section>
+
+    <section id="members" class="grid-view">
+      <!-- Business cards injected here via JS -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> My City Chamber of Commerce</p>
+    <p>Project by Olalemi Emmanuel | WDD 231</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
