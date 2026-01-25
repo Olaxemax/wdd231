@@ -1,20 +1,26 @@
-{
-  "members": [
-    {
-      "name": "Sunrise Bakery",
-      "address": "123 Main St",
-      "phone": "555-1234",
-      "website": "https://sunrisebakery.com",
-      "image": "images/bakery.png",
-      "membership": "Gold"
-    },
-    {
-      "name": "Tech Solutions",
-      "address": "456 Innovation Ave",
-      "phone": "555-5678",
-      "website": "https://techsolutions.com",
-      "image": "images/tech.png",
-      "membership": "Silver"
-    }
-  ]
-}
+[
+  {
+    "name": "ABC Consulting",
+    "address": "123 Main St",
+    "phone": "555-1234",
+    "website": "https://abcconsulting.com",
+    "image": "images/abc.jpg",
+    "membership": "Gold"
+  },
+  {
+    "name": "XYZ Bakery",
+    "address": "456 Elm St",
+    "phone": "555-5678",
+    "website": "https://xyzbakery.com",
+    "image": "images/xyz.jpg",
+    "membership": "Silver"
+  },
+  {
+    "name": "Local Hardware",
+    "address": "789 Oak St",
+    "phone": "555-9012",
+    "website": "https://localhardware.com",
+    "image": "images/hardware.jpg",
+    "membership": "Bronze"
+  }
+]
