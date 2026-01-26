@@ -207,6 +207,13 @@ body.dark-mode .spotlights {
   border: 1px solid #333;
 }
 
+/* ✅ Fix: Upcoming Events list items in dark mode */
+body.dark-mode .events li {
+  background: #262626;   /* dark card background */
+  color: #ffffff;        /* force text to white */
+  border: 1px solid #444;
+}
+
 body.dark-mode #spotlight-container .spotlight-card {
   background: #262626;
   color: #f5f5f5;
