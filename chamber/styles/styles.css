@@ -1,120 +1,278 @@
-:root {
-  --primary: #004466;
-  --secondary: #0099cc;
-  --light: #f4f4f4;
-  --dark: #333;
-}
-
+/* Base Styles */
 body {
-   font-family: 'Roboto', sans-serif;
-}
-h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif; 
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: var(--light);
-  color: var(--dark);
-}
-
-header {
-  background: var(--primary);
-  color: white;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav {
-  position: relative;
-}
-
-#menuBtn {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-}
-
-#navLinks {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
   margin: 0;
   padding: 0;
 }
 
-#navLinks li {
-  margin: 0;
+/* Sticky Navigation */
+header {
+  background: #004080;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 nav a {
-  color: white;
+  color: #fff;
+  margin: 0 1rem;
   text-decoration: none;
+  font-weight: 700;
 }
 
 nav a.active {
-  border-bottom: 2px solid var(--secondary);
+  border-bottom: 2px solid #ffcc00;
 }
 
-.view-toggle {
-  margin: 1rem;
-  text-align: center;
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: #e6f2ff;
+
+  /* Fade-in animation */
+  opacity: 0;
+  animation: fadeInHero 1.5s ease-in forwards;
 }
 
-#members {
+.hero h1 {
+  margin: 0;
+  color: #004080;
+}
+
+.hero p {
+  margin: 0.5rem 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #004080;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #003366;
+}
+
+/* Passport Photo */
+.passport-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Events Section */
+.events {
+  padding: 2rem;
+  background: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.events.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.events h2 {
+  color: #004080;
+}
+
+.events ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
-  padding: 1rem;
+  list-style: none;
+  padding: 0;
 }
 
-.member-card {
-  background: white;
+.events li {
+  background: #f9f9f9;
   border: 1px solid #ddd;
   padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Weather Section */
+.weather {
+  padding: 2rem;
+  background: #f0f8ff;
+}
+
+/* Spotlights Section */
+.spotlights {
+  padding: 2rem;
+  background: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.spotlights.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#spotlight-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+#spotlight-container .spotlight-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+#spotlight-container .spotlight-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  background: #004080;
+  color: #fff;
   text-align: center;
+  padding: 1rem;
 }
 
-.member-card img {
-  max-width: 100px;
-  height: auto;
+footer .btn-toggle {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #ffcc00;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.list-view .member-card {
-  display: flex;
-  align-items: center;
-  text-align: left;
+footer .btn-toggle:hover {
+  background: #e6b800;
 }
 
-.list-view .member-card img {
-  margin-right: 1rem;
+/* Dark Mode */
+body.dark-mode {
+  background-color: #0d0d0d; /* darker background */
+  color: #f5f5f5; /* brighter text for visibility */
 }
 
-/* Mobile styles */
+body.dark-mode header {
+  background: #1a1a1a;
+}
+
+body.dark-mode nav a {
+  color: #f5f5f5;
+}
+
+body.dark-mode .hero {
+  background: #1e1e1e;
+}
+
+body.dark-mode .btn {
+  background: #ffcc00;
+  color: #000;
+}
+
+body.dark-mode footer {
+  background: #1a1a1a;
+  color: #f5f5f5;
+}
+
+body.dark-mode .events,
+body.dark-mode .spotlights {
+  background: #1e1e1e;
+  border: 1px solid #333;
+}
+
+body.dark-mode #spotlight-container .spotlight-card {
+  background: #262626;
+  color: #f5f5f5;
+  border: 1px solid #444;
+}
+
+/* Responsive Layout */
 @media (max-width: 768px) {
-  #menuBtn {
-    display: block;
-  }
-
-  #navLinks {
-    display: none;
+  /* Hero section stacks vertically */
+  .hero {
     flex-direction: column;
-    background: var(--primary);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
+    text-align: center;
+    gap: 1rem;
   }
 
-  #navLinks.show {
-    display: flex;
+  .passport-photo {
+    margin-bottom: 1rem;
   }
 
-  #navLinks a {
-    padding: 1rem;
-    border-top: 1px solid var(--secondary);
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+  }
+
+  /* Events & Spotlights stack */
+  .events ul {
+    grid-template-columns: 1fr;
+  }
+
+  #spotlight-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Smaller devices */
+  body {
+    font-size: 0.9rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInHero {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

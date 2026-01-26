@@ -1,0 +1,84 @@
+/* normalize.css */
+
+/* Document
+   ========================================================================== */
+html {
+  line-height: 1.15; /* Better default line-height */
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+}
+
+body {
+  margin: 0;
+}
+
+/* Sections
+   ========================================================================== */
+main {
+  display: block;
+}
+
+/* Grouping content
+   ========================================================================== */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: 80%;
+}
+
+/* Embedded content
+   ========================================================================== */
+img {
+  border-style: none;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Forms
+   ========================================================================== */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+  -webkit-appearance: button;
+}
+
+/* Accessibility
+   ========================================================================== */
+[hidden] {
+  display: none;
+}
