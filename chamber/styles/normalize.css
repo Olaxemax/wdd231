@@ -1,39 +1,47 @@
-/* normalize.css */
+/* normalize.css – updated for Lagos Chamber of Commerce site */
 
 /* Document
    ========================================================================== */
 html {
-  line-height: 1.15; /* Better default line-height */
+  line-height: 1.5; /* smoother line-height for readability */
   -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
 }
 
 body {
   margin: 0;
+  font-family: 'Roboto', 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 /* Sections
    ========================================================================== */
-main {
-  display: block;
-}
-
+main,
 header,
 footer,
-section {
+section,
+nav {
   display: block;
 }
 
 /* Grouping content
    ========================================================================== */
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+  font-size: 2rem;
+  margin: 0.75em 0;
+  font-weight: 700;
 }
 
-h2,
+h2 {
+  font-size: 1.5rem;
+  margin: 0.75em 0;
+  font-weight: 700;
+}
+
 h3 {
-  font-weight: bold;
+  font-size: 1.25rem;
   margin: 0.5em 0;
+  font-weight: 600;
 }
 
 /* Text-level semantics
@@ -42,11 +50,12 @@ a {
   background-color: transparent;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 700;
 }
 
 small {
@@ -59,6 +68,7 @@ img {
   border-style: none;
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 /* Forms
@@ -69,7 +79,7 @@ select,
 textarea {
   font-family: inherit;
   font-size: 100%;
-  line-height: 1.15;
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -101,7 +111,7 @@ textarea {
 /* Accessibility
    ========================================================================== */
 [hidden] {
-  display: none;
+  display: none !important;
 }
 
 /* Membership Cards & Modals Reset
@@ -136,4 +146,20 @@ textarea {
   cursor: pointer;
   font-size: 1.5em;
   line-height: 1;
+}
+
+/* Lists reset for consistency */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Inputs & Buttons focus states for accessibility */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
 }

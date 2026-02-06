@@ -1,369 +1,419 @@
-/* Base Styles */
+/* =========================
+   Normalize + Base Reset
+========================= */
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  font-family: 'Roboto', 'Montserrat', sans-serif;
   background-color: #f9f9f9;
   color: #333;
-  margin: 0;
-  padding: 0;
+  line-height: 1.6;
 }
 
-/* Sticky Navigation */
-header {
-  background: #004080;
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
+main,
+header,
+footer,
+section,
 nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: block;
 }
 
-nav a {
-  color: #fff;
-  margin: 0 1rem;
-  text-decoration: none;
+h1 {
+  font-size: 2rem;
+  margin: 0.75em 0;
   font-weight: 700;
 }
 
-nav a.active {
-  border-bottom: 2px solid #ffcc00;
+h2 {
+  font-size: 1.5rem;
+  margin: 0.75em 0;
+  font-weight: 700;
 }
 
-/* Hero Section */
+h3 {
+  font-size: 1.25rem;
+  margin: 0.5em 0;
+  font-weight: 600;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+small {
+  font-size: 80%;
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+  -webkit-appearance: button;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
+}
+
+/* =========================
+   Header & Navigation
+========================= */
+header {
+  background: #004080;
+  color: #fff;
+  padding: 1rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover,
+header nav a.active {
+  color: #ffd700;
+}
+
+/* =========================
+   Hero Section
+========================= */
 .hero {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  background: #e6f2ff;
-
-  /* Fade-in animation */
-  opacity: 0;
-  animation: fadeInHero 1.5s ease-in forwards;
-}
-
-.hero h1 {
-  margin: 0;
-  color: #004080;
-}
-
-.hero p {
-  margin: 0.5rem 0;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #004080;
+  padding: 3rem 1rem;
+  background: linear-gradient(rgba(0,64,128,0.7), rgba(0,64,128,0.7)),
+              url('../images/mycity.png') center/cover no-repeat;
   color: #fff;
-  border-radius: 4px;
-  text-decoration: none;
+  text-align: center;
 }
 
-.btn:hover {
-  background: #003366;
+.hero img {
+  max-width: 200px;
+  border-radius: 8px;
+  margin-right: 2rem;
 }
 
-/* Passport Photo */
-.passport-photo {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+.hero .cta h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-/* Events Section */
-.events {
-  padding: 2rem;
-  background: #fff;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.events.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.events h2 {
+.hero .btn {
+  display: inline-block;
+  background: #ffd700;
   color: #004080;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
-.events ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
+.hero .btn:hover {
+  background: #ffb700;
+}
+
+/* =========================
+   Sections
+========================= */
+main section {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #004080;
 }
 
 .events li {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
+  margin: 0.5rem 0;
+}
+
+.weather #weather-info {
+  background: #eef;
   padding: 1rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
 }
 
-/* Weather Section */
-.weather {
-  padding: 2rem;
-  background: #f0f8ff;
+/* =========================
+   Directory Page
+========================= */
+.view-toggle {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-/* Spotlights Section */
-.spotlights {
-  padding: 2rem;
-  background: #fff;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
+.view-toggle button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #004080;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.spotlights.visible {
-  opacity: 1;
-  transform: translateY(0);
+.view-toggle button:hover {
+  background: #003060;
 }
 
-#spotlight-container {
+#members.grid-view {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
 }
 
-#spotlight-container .spotlight-card {
+#members.list-view {
+  display: block;
+}
+
+#members .card {
   background: #fff;
+  padding: 1rem;
   border: 1px solid #ddd;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: transform 0.2s ease;
+  border-radius: 6px;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-#spotlight-container .spotlight-card:hover {
+#members .card:hover {
   transform: translateY(-5px);
 }
 
-/* Join Page Layout */
-.join-page {
+/* =========================
+   Join Page
+========================= */
+.join-page .form-section form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 2rem;
-}
-
-.form-section {
+  gap: 1rem;
   background: #fff;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.form-section h1 {
-  color: #004080;
-  margin-bottom: 1rem;
+.join-page label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
 }
 
-form label {
-  display: block;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-form input,
-form select,
-form textarea {
-  width: 100%;
+.join-page input,
+.join-page select,
+.join-page textarea {
   padding: 0.5rem;
-  margin-top: 0.3rem;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-form button {
+.join-page button {
   background: #004080;
   color: #fff;
-  padding: 0.7rem 1.2rem;
+  padding: 0.75rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-  font-weight: 700;
 }
 
-form button:hover {
-  background: #003366;
+.join-page button:hover {
+  background: #003060;
 }
 
 /* Membership Cards */
 .membership-cards {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
-.membership-cards h2 {
-  color: #004080;
-  margin-bottom: 1rem;
-}
-
-.card {
+.membership-cards .card {
   background: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
   border: 1px solid #ddd;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-  /* Entrance animation */
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInCard 0.8s ease forwards;
 }
 
-.card:nth-child(2) { animation-delay: 0.2s; }
-.card:nth-child(3) { animation-delay: 0.4s; }
-.card:nth-child(4) { animation-delay: 0.6s; }
-.card:nth-child(5) { animation-delay: 0.8s; }
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.card h3 {
-  margin-top: 0;
+.membership-cards .card h3 {
   color: #004080;
 }
 
-.card button {
+.membership-cards button {
   margin-top: 1rem;
-  background: #ffcc00;
-  color: #000;
+  background: #ffd700;
+  color: #004080;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
-  font-weight: 600;
 }
 
-.card button:hover {
-  background: #e6b800;
+.membership-cards button:hover {
+  background: #ffb700;
 }
 
 /* Modals */
 .modal {
   display: none;
   position: fixed;
-  z-index: 2000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
   background: rgba(0,0,0,0.6);
-  animation: fadeIn 0.3s ease;
 }
 
 .modal-content {
   background: #fff;
   margin: 10% auto;
   padding: 2rem;
-  border-radius: 8px;
-  width: 90%;
+  border-radius: 6px;
   max-width: 500px;
-  animation: slideUp 0.4s ease;
+  position: relative;
 }
 
-.modal-content h3 {
-  margin-top: 0;
-  color: #004080;
-}
-
-.modal-content ul {
-  padding-left: 1.2rem;
-}
-
-.close {
-  float: right;
+.modal .close {
+  position: absolute;
+  top: 10px; right: 15px;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #333;
 }
 
-.close:hover {
-  color: #004080;
+/* =========================
+   Thank You Page
+========================= */
+main ul {
+  list-style: none;
+  margin-top: 1rem;
 }
 
-/* Footer */
+main ul li {
+  margin: 0.5rem 0;
+}
+
+/* =========================
+   Footer
+========================= */
 footer {
   background: #004080;
   color: #fff;
   text-align: center;
   padding: 1rem;
+  margin-top: 2rem;
 }
 
-footer .btn-toggle {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: #ffcc00;
+footer p {
+  margin: 0.3rem 0;
+}
+
+/* =========================
+   Dark Mode Toggle Button
+========================= */
+#darkModeToggle {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: #ffd700;
+  color: #004080;
   border: none;
-  border-radius: 4px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: bold;
   cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, color 0.3s ease;
+  z-index: 2000;
 }
 
-footer .btn-toggle:hover {
-  background: #e6b800;
+#darkModeToggle:hover {
+  background: #ffb700;
 }
 
-/* Dark Mode */
+/* =========================
+   Dark Mode Styles
+========================= */
 body.dark-mode {
-  background-color: #0d0d0d;
-  color: #f5f5f5;
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 body.dark-mode header {
-  background: #1a1a1a;
+  background: #222;
 }
 
-body.dark-mode nav a {
-  color: #f5f5f5;
-}
-
-body.dark-mode .hero {
-  background: #1e1e1e;
-}
-
-body.dark-mode .btn {
-  background: #ffcc00;
-  color: #000;
-}
-
-body.dark-mode .form-section,
-body.dark-mode .card,
-body.dark-mode .modal-content {
-  background: #1e1e1e;
-  color: #f5f5f5;
-  border: 1px solid #333;
-}
-
-body.dark-mode .card button {
-  background: #ffcc00;
-  color: #000;
-}
-
-body.dark-mode footer {
-  background: #1a1a1a;
-  color: #f5f5f5;
-}
-
-body.dark-mode .events,
-body.dark-mode .spotlights {
-  background
+body.dark-mode header nav a {
+  color: #e

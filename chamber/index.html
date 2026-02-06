@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chamber of Commerce | Home</title>
+  <title>Lagos Chamber of Commerce | Home</title>
   <meta name="description" content="Discover the Lagos Chamber of Commerce: connecting businesses, promoting growth, and building community together." />
   <meta name="author" content="Olalemi Emmanuel" />
 
   <!-- CSS Files -->
-  <link rel="stylesheet" href="styles/styles.css" />
   <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
 
   <!-- Favicon -->
   <link rel="icon" href="images/favicon.png" type="image/png" />
@@ -17,12 +17,12 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Lagos Chamber of Commerce | Connecting Businesses and Community Growth" />
   <meta property="og:description" content="Join the Lagos Chamber of Commerce to connect with local businesses, discover events, and grow together in our thriving community." />
-  <meta property="og:image" content="https://olaxemax.github.io/wdd231/chamber/images/assignment.webp" />
+  <meta property="og:image" content="https://olaxemax.github.io/wdd231/chamber/images/mycity.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:url" content="https://olaxemax.github.io/wdd231/chamber/index.html" />
@@ -31,12 +31,15 @@
   <!-- Header -->
   <header>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="directory.html">Directory</a>
       <a href="join.html">Join</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
+  <!-- Dark Mode Toggle -->
+  <button id="darkModeToggle">🌙 Dark Mode</button>
 
   <!-- Main Content -->
   <main>
@@ -44,7 +47,7 @@
     <section class="hero">
       <img src="images/mycity.png" alt="City view" class="passport-photo" />
       <div class="cta">
-        <h1>Chamber of Commerce | Home</h1>
+        <h1>Lagos Chamber of Commerce</h1>
         <p>Connecting businesses, building community.</p>
         <a href="join.html" class="btn">Join the Chamber</a>
       </div>
@@ -63,23 +66,19 @@
     <!-- Weather Section -->
     <section class="weather">
       <h2>Local Weather</h2>
-      <div id="weather-info">
-        <!-- Weather data will be injected here by weather.js -->
-      </div>
+      <div id="weather-info"></div>
     </section>
 
     <!-- Spotlight Section -->
     <section class="spotlights">
       <h2>Member Spotlights</h2>
-      <div id="spotlight-container">
-        <!-- Spotlight businesses will be injected here by spotlight.js -->
-      </div>
+      <div id="spotlight-container"></div>
     </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 Chamber of Commerce</p>
+    <p>&copy; <span id="year"></span> Lagos Chamber of Commerce</p>
     <p>Contact us: info@chamber.com | (555) 123-4567</p>
   </footer>
 
@@ -87,5 +86,6 @@
   <script src="scripts/weather.js"></script>
   <script src="scripts/spotlight.js"></script>
   <script src="scripts/main.js"></script>
+  <script src="scripts/darkmode.js"></script>
 </body>
 </html>
