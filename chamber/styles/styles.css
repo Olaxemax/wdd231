@@ -152,6 +152,156 @@ nav a.active {
   transform: translateY(-5px);
 }
 
+/* Join Page Layout */
+.join-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.form-section {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.form-section h1 {
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background: #004080;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+form button:hover {
+  background: #003366;
+}
+
+/* Membership Cards */
+.membership-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.membership-cards h2 {
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  /* Entrance animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInCard 0.8s ease forwards;
+}
+
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.4s; }
+.card:nth-child(4) { animation-delay: 0.6s; }
+.card:nth-child(5) { animation-delay: 0.8s; }
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #004080;
+}
+
+.card button {
+  margin-top: 1rem;
+  background: #ffcc00;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.card button:hover {
+  background: #e6b800;
+}
+
+/* Modals */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.6);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  animation: slideUp 0.4s ease;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: #004080;
+}
+
+.modal-content ul {
+  padding-left: 1.2rem;
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.close:hover {
+  color: #004080;
+}
+
 /* Footer */
 footer {
   background: #004080;
@@ -175,8 +325,8 @@ footer .btn-toggle:hover {
 
 /* Dark Mode */
 body.dark-mode {
-  background-color: #0d0d0d; /* darker background */
-  color: #f5f5f5; /* brighter text for visibility */
+  background-color: #0d0d0d;
+  color: #f5f5f5;
 }
 
 body.dark-mode header {
@@ -196,6 +346,19 @@ body.dark-mode .btn {
   color: #000;
 }
 
+body.dark-mode .form-section,
+body.dark-mode .card,
+body.dark-mode .modal-content {
+  background: #1e1e1e;
+  color: #f5f5f5;
+  border: 1px solid #333;
+}
+
+body.dark-mode .card button {
+  background: #ffcc00;
+  color: #000;
+}
+
 body.dark-mode footer {
   background: #1a1a1a;
   color: #f5f5f5;
@@ -203,83 +366,4 @@ body.dark-mode footer {
 
 body.dark-mode .events,
 body.dark-mode .spotlights {
-  background: #1e1e1e;
-  border: 1px solid #333;
-}
-
-/* ✅ Fix: Upcoming Events list items in dark mode */
-body.dark-mode .events li {
-  background: #262626;   /* dark card background */
-  color: #ffffff;        /* force text to white */
-  border: 1px solid #444;
-}
-
-body.dark-mode #spotlight-container .spotlight-card {
-  background: #262626;
-  color: #f5f5f5;
-  border: 1px solid #444;
-}
-
-/* Responsive Layout */
-@media (max-width: 768px) {
-  /* Hero section stacks vertically */
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-  }
-
-  .passport-photo {
-    margin-bottom: 1rem;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav a {
-    margin: 0.5rem 0;
-  }
-
-  /* Events & Spotlights stack */
-  .events ul {
-    grid-template-columns: 1fr;
-  }
-
-  #spotlight-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Smaller devices */
-  body {
-    font-size: 0.9rem;
-  }
-
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .btn {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
-  }
-
-  footer {
-    font-size: 0.8rem;
-  }
-}
-
-/* Animations */
-@keyframes fadeInHero {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+  background

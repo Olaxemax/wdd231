@@ -17,11 +17,23 @@ main {
   display: block;
 }
 
+header,
+footer,
+section {
+  display: block;
+}
+
 /* Grouping content
    ========================================================================== */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+}
+
+h2,
+h3 {
+  font-weight: bold;
+  margin: 0.5em 0;
 }
 
 /* Text-level semantics
@@ -63,6 +75,10 @@ textarea {
 
 button {
   overflow: visible;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 button,
@@ -77,8 +93,47 @@ button {
   -webkit-appearance: button;
 }
 
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
 /* Accessibility
    ========================================================================== */
 [hidden] {
   display: none;
+}
+
+/* Membership Cards & Modals Reset
+   ========================================================================== */
+.card {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.modal-content {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.close {
+  cursor: pointer;
+  font-size: 1.5em;
+  line-height: 1;
 }

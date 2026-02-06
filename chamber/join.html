@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chamber of Commerce | Join</title>
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html">Join</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="join-page">
+    <!-- Membership Form -->
+    <section class="form-section">
+      <h1>Join the Chamber</h1>
+      <form method="get" action="thankyou.html">
+        <label>
+          First Name:
+          <input type="text" name="firstName" required autocomplete="given-name">
+        </label>
+
+        <label>
+          Last Name:
+          <input type="text" name="lastName" required autocomplete="family-name">
+        </label>
+
+        <label>
+          Organizational Title:
+          <input type="text" name="title" autocomplete="organization-title" 
+                 pattern="[A-Za-z\\-\\s]{7,}">
+        </label>
+
+        <label>
+          Email:
+          <input type="email" name="email" required placeholder="example@domain.com">
+        </label>
+
+        <label>
+          Mobile Phone:
+          <input type="tel" name="phone" required autocomplete="tel">
+        </label>
+
+        <label>
+          Business/Organization Name:
+          <input type="text" name="organization" required autocomplete="organization">
+        </label>
+
+        <label>
+          Membership Level:
+          <select name="membership" required>
+            <option value="np">Non-Profit (Free)</option>
+            <option value="bronze">Bronze</option>
+            <option value="silver">Silver</option>
+            <option value="gold">Gold</option>
+          </select>
+        </label>
+
+        <label>
+          Business Description:
+          <textarea name="description"></textarea>
+        </label>
+
+        <!-- Hidden timestamp -->
+        <input type="hidden" name="timestamp" value="">
+        
+        <button type="submit">Submit Application</button>
+      </form>
+    </section>
+
+    <!-- Membership Cards -->
+    <section class="membership-cards">
+      <h2>Membership Levels</h2>
+      <div class="card np">
+        <h3>Non-Profit</h3>
+        <p>No fee, community support benefits.</p>
+        <button data-modal="np-modal">View Benefits</button>
+      </div>
+      <div class="card bronze">
+        <h3>Bronze</h3>
+        <p>Basic membership with event access.</p>
+        <button data-modal="bronze-modal">View Benefits</button>
+      </div>
+      <div class="card silver">
+        <h3>Silver</h3>
+        <p>Includes training and advertising perks.</p>
+        <button data-modal="silver-modal">View Benefits</button>
+      </div>
+      <div class="card gold">
+        <h3>Gold</h3>
+        <p>Premium benefits, spotlight positions.</p>
+        <button data-modal="gold-modal">View Benefits</button>
+      </div>
+    </section>
+
+    <!-- Membership Modals -->
+    <div id="np-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" data-close="np-modal">&times;</span>
+        <h3>Non-Profit Membership</h3>
+        <ul>
+          <li>No membership fee</li>
+          <li>Access to community events</li>
+          <li>Networking opportunities</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="bronze-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" data-close="bronze-modal">&times;</span>
+        <h3>Bronze Membership</h3>
+        <ul>
+          <li>Basic advertising opportunities</li>
+          <li>Discounted event tickets</li>
+          <li>Business directory listing</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="silver-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" data-close="silver-modal">&times;</span>
+        <h3>Silver Membership</h3>
+        <ul>
+          <li>Enhanced advertising options</li>
+          <li>Free training workshops</li>
+          <li>Priority event registration</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="gold-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" data-close="gold-modal">&times;</span>
+        <h3>Gold Membership</h3>
+        <ul>
+          <li>Premium advertising package</li>
+          <li>Exclusive networking events</li>
+          <li>One-on-one business consulting</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Chamber of Commerce</p>
+    <p>Contact us: info@chamber.com | (555) 123-4567</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Auto-fill timestamp
+    document.querySelector("input[name='timestamp']").value = new Date().toISOString();
+
+    // Modal functionality
+    const buttons = document.querySelectorAll("[data-modal]");
+    const closes = document.querySelectorAll(".close");
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const modalId = btn.getAttribute("data-modal");
+        document.getElementById(modalId).style.display = "block";
+      });
+    });
+
+    closes.forEach(closeBtn => {
+      closeBtn.addEventListener("click", () => {
+        const modalId = closeBtn.getAttribute("data-close");
+        document.getElementById(modalId).style.display = "none";
+      });
+    });
+
+    window.addEventListener("click", (event) => {
+      document.querySelectorAll(".modal").forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
