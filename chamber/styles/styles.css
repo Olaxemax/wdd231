@@ -326,7 +326,6 @@ h2 {
 .membership-cards button:hover {
   background: #ffb700;
 }
-/* ... keep your existing reset, header, hero, join, directory styles ... */
 
 /* =========================
    Discover Page
@@ -356,10 +355,26 @@ h2 {
   animation: cardFadeIn 0.8s ease forwards;
 }
 
-.attraction figure { margin: 0; }
-.attraction img { width: 100%; border-radius: 6px; }
-.attraction h2 { color: #004080; margin-top: 0.5rem; }
-.attraction address { font-style: normal; color: #555; margin: 0.5rem 0; }
+.attraction figure {
+  margin: 0;
+}
+
+.attraction img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.attraction h2 {
+  color: #004080;
+  margin-top: 0.5rem;
+}
+
+.attraction address {
+  font-style: normal;
+  color: #555;
+  margin: 0.5rem 0;
+}
 
 .attraction button {
   margin-top: 1rem;
@@ -371,7 +386,10 @@ h2 {
   cursor: pointer;
   font-weight: bold;
 }
-.attraction button:hover { background: #ffb700; }
+
+.attraction button:hover {
+  background: #ffb700;
+}
 
 /* Hover effect (desktop only) */
 @media (hover: hover) {
@@ -396,4 +414,6 @@ h2 {
 /* Large screens */
 @media (min-width: 1025px) {
   .attractions-grid {
-    grid-template-columns: repeat(
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "a b c
