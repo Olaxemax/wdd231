@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lagos Chamber of Commerce | Discover</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html">Join</a>
+      <a href="discover.html" class="active">Discover</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="discover-page">
+    <h1>Discover Lagos</h1>
+    <p id="visitor-message"></p>
+
+    <!-- Attractions Grid -->
+    <section class="attractions-grid" id="attractions">
+      <!-- Cards injected dynamically -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Lagos Chamber of Commerce</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <img id="modalImage" alt="">
+      <p id="modalDescription"></p>
+      <address id="modalAddress"></address>
+      <a id="modalLink" href="#" target="_blank">Visit Website</a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module">
+    import { attractions } from "data/attractions.mjs";
+
+    const container = document.getElementById("attractions");
+    const modal = document.getElementById("modal");
+    const closeModal = document.getElementById("closeModal");
+
+    // Build cards
+    attractions.forEach((item, index) => {
+      const card = document.createElement("article");
+      card.classList.add("attraction");
+      card.style.gridArea = String.fromCharCode(97 + index); // a–h
+      card.innerHTML = `
+        <h2>${item.name}</h2>
+        <figure>
+          <img src="${item.image}" alt="${item.name}" />
+          <figcaption>${item.name}</figcaption>
+        </figure>
+        <address>${item.address}</address>
+        <p>${item.description}</p>
+        <button data-index="${index}">Learn More</button>
+      `;
+      container.appendChild(card);
+    });
+
+    // Modal logic
+    container.addEventListener("click", e => {
+      if (e.target.tagName === "BUTTON") {
+        const idx = e.target.dataset.index;
+        const item = attractions[idx];
+        document.getElementById("modalTitle").textContent = item.name;
+        document.getElementById("modalImage").src = item.image;
+        document.getElementById("modalImage").alt = item.name;
+        document.getElementById("modalDescription").textContent = item.description;
+        document.getElementById("modalAddress").textContent = item.address;
+        document.getElementById("modalLink").href = item.url;
+        modal.style.display = "block";
+      }
+    });
+
+    closeModal.addEventListener("click", () => modal.style.display = "none");
+    window.addEventListener("click", e => { if (e.target === modal) modal.style.display = "none"; });
+
+    // Visitor message
+    const message = document.getElementById("visitor-message");
+    const lastVisit = localStorage.getItem("lastVisit");
+    const now = Date.now();
+
+    if (!lastVisit) {
+      message.textContent = "Welcome! Let us know if you have any questions.";
+    } else {
+      const days = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+      if (days < 1) {
+        message.textContent = "Back so soon! Awesome!";
+      } else if (days === 1) {
+        message.textContent = "You last visited 1 day ago.";
+      } else {
+        message.textContent = `You last visited ${days} days ago.`;
+      }
+    }
+    localStorage.setItem("lastVisit", now);
+  </script>
+</body>
+</html>
