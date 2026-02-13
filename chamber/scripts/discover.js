@@ -1,4 +1,4 @@
-import { attractions } from "../data/discover.mjs"; 
+import { attractions } from "../data/attractions.mjs";
 
 const container = document.getElementById("attractions");
 const modal = document.getElementById("modal");
