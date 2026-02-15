@@ -428,4 +428,6 @@ main section {
 }
 
 .modal-content address {
-  font
+  font-style: normal;
+  color: #555;
+  margin-bottom: 1rem;
