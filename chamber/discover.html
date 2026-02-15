@@ -54,16 +54,28 @@
   </footer>
 
   <!-- Modal -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span id="closeModal" class="close">&times;</span>
-      <h2 id="modalTitle"></h2>
-      <img id="modalImage" alt="">
-      <p id="modalDescription"></p>
-      <address id="modalAddress"></address>
-      <a id="modalLink" href="#" target="_blank">Visit Website</a>
-    </div>
+  <!-- Modal -->
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-content">
+    <!-- Close button -->
+    <button id="closeModal" class="close" aria-label="Close modal">&times;</button>
+
+    <!-- Modal title -->
+    <h2 id="modalTitle"></h2>
+
+    <!-- Modal image -->
+    <img id="modalImage" src="" alt="Attraction image">
+
+    <!-- Modal description -->
+    <p id="modalDescription"></p>
+
+    <!-- Modal address -->
+    <address id="modalAddress"></address>
+
+    <!-- External link -->
+    <a id="modalLink" href="#" target="_blank" rel="noopener noreferrer">Visit Website</a>
   </div>
+</div>
 
   <!-- Scripts -->
    <script src="scripts/script.js"></script>
