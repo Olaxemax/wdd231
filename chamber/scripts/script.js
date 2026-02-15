@@ -1,8 +1,12 @@
 // Load JSON data
 async function loadMembers() {
-  const response = await fetch('data/members.json');
-  const data = await response.json();
-  displayMembers(data.members);
+  try {
+    const response = await fetch('data/members.json');
+    const data = await response.json();
+    displayMembers(data.members);
+  } catch (error) {
+    console.error("Error loading members:", error);
+  }
 }
 
 function displayMembers(members) {
@@ -18,7 +22,7 @@ function displayMembers(members) {
       <h3>${member.name}</h3>
       <p>${member.address}</p>
       <p>${member.phone}</p>
-      <a href="${member.website}" target="_blank">Visit Website</a>
+      <a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
       <p><strong>Membership:</strong> ${member.membership}</p>
     `;
 
@@ -41,9 +45,11 @@ document.getElementById('listBtn').addEventListener('click', () => {
 const menuBtn = document.getElementById('menuBtn');
 const navLinks = document.getElementById('navLinks');
 
-menuBtn.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-});
+if (menuBtn && navLinks) {
+  menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+}
 
 // Footer info
 document.getElementById('year').textContent = new Date().getFullYear();

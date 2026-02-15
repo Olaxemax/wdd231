@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Lagos Chamber of Commerce | Discover</title>
-  <meta name="description" content="Business Directory for Lagos Chamber of Commerce">
-  <meta name="author" content="Olalemi Emmanuel">
+
+  <!-- Meta description -->
+  <meta name="description" content="Business Directory for Lagos Chamber of Commerce - Explore local businesses, services, and connect with the community." />
+  <meta name="keywords" content="Lagos Chamber of Commerce, business directory, local businesses, services, community connection" />
+  <meta name="author" content="Olalemi Emmanuel" />
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <!-- Open Graph -->
- <meta property="og:title" content="Lagos Chamber of Commerce Directory">
-<meta property="og:type" content="website">
-<meta property="og:description" content="Explore the Lagos Chamber of Commerce Directory to connect with local businesses, discover services, and grow your network.">
-<meta property="og:image" content="https://olaxemax.github.io/wdd231/chamber/images/mycity.webp">
-<meta property="og:url" content="https://olaxemax.github.io/wdd231/chamber/directory.html">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+  <meta property="og:title" content="Lagos Chamber of Commerce Directory" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Explore the Lagos Chamber of Commerce Directory to connect with local businesses, discover services, and grow your network." />
+  <meta property="og:image" content="https://olaxemax.github.io/wdd231/chamber/images/mycity.webp" />
+  <meta property="og:url" content="https://olaxemax.github.io/wdd231/chamber/directory.html" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
   <!-- Favicon -->
-  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="icon" href="images/favicon.png" type="image/png" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
   <header>
@@ -39,51 +43,51 @@
     </nav>
   </header>
 
-<main class="discover-page">
-    <h2>Discover Lagos</h2>
+  <main class="discover-page">
+    <!-- Corrected heading -->
+    <h1>Discover Lagos</h1>
+
     <p id="visitor-message"></p>
 
     <!-- Attractions Grid -->
-    <div
     <section class="attractions-grid" id="attractions">
       <!-- Cards injected dynamically -->
     </section>
-    </div>
   </main>
 
-<footer class="site-footer">
-    <div 
+  <footer class="site-footer">
+    <div>
       <p>&copy; <span id="year"></span> Lagos Chamber of Commerce</p>
       <p>Project by Olalemi Emmanuel | WDD 231</p>
       <p>Last Modified: <span id="lastModified"></span></p>
     </div>
   </footer>
 
-<!-- Modal -->
-<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <div class="modal-content">
-    <!-- Close button -->
-    <button id="closeModal" class="close" aria-label="Close modal">&times;</button>
+  <!-- Modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <!-- Close button -->
+      <button id="closeModal" class="close" aria-label="Close modal">&times;</button>
 
-    <!-- Modal title (placeholder text so it's never empty) -->
-    <h2 id="modalTitle">Attraction Title</h2>
+      <!-- Modal title -->
+      <h2 id="modalTitle">Attraction Title</h2>
 
-    <!-- Modal image (placeholder src so it's valid) -->
-    <img id="modalImage" src="images/placeholder.png" alt="Attraction image">
+      <!-- Modal image -->
+      <img id="modalImage" src="images/placeholder.png" alt="Attraction image" />
 
-    <!-- Modal description -->
-    <p id="modalDescription">Description will appear here.</p>
+      <!-- Modal description -->
+      <p id="modalDescription">Description will appear here.</p>
 
-    <!-- Modal address -->
-    <address id="modalAddress">Address will appear here.</address>
+      <!-- Modal address -->
+      <address id="modalAddress">Address will appear here.</address>
 
-    <!-- External link -->
-    <a id="modalLink" href="#" target="_blank" rel="noopener noreferrer">Visit Website</a>
+      <!-- External link -->
+      <a id="modalLink" href="#" target="_blank" rel="noopener noreferrer">Visit Website</a>
+    </div>
   </div>
-</div>
 
   <!-- Scripts -->
-   <script src="scripts/script.js"></script>
+  <script src="scripts/script.js"></script>
   <script src="scripts/darkmode.js"></script>
   <script type="module" src="scripts/discover.js"></script>
 </body>
