@@ -1,3 +1,4 @@
+
 import { attractions } from "../data/attractions.mjs";
 
 const container = document.getElementById("attractions");
@@ -11,10 +12,12 @@ attractions.forEach((item, index) => {
   card.style.gridArea = String.fromCharCode(97 + index); // a–h
   card.innerHTML = `
     <h2>${item.name}</h2>
-    <figure>
-      <img src="${item.image}" alt="${item.name}" />
-      <figcaption>${item.name}</figcaption>
-    </figure>
+    <a href="${item.url}" target="_blank">
+      <figure>
+        <img src="${item.image}" alt="${item.name}" />
+        <figcaption>${item.name}</figcaption>
+      </figure>
+    </a>
     <address>${item.address}</address>
     <p>${item.description}</p>
     <button data-index="${index}">Learn More</button>

@@ -34,6 +34,7 @@ h2 {
   font-size: 1.5rem;
   margin: 0.75em 0;
   font-weight: 700;
+  color: #004080;
 }
 
 h3 {
@@ -43,7 +44,6 @@ h3 {
 }
 
 a {
-  background-color: transparent;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
@@ -59,10 +59,10 @@ small {
 }
 
 img {
-  border-style: none;
   max-width: 100%;
   height: auto;
   display: block;
+  border-style: none;
 }
 
 button,
@@ -76,32 +76,14 @@ textarea {
 }
 
 button {
-  overflow: visible;
   border: none;
   background: none;
   padding: 0;
   cursor: pointer;
 }
 
-button,
-select {
-  text-transform: none;
-}
-
-[type="button"],
-[type="reset"],
-[type="submit"],
-button {
-  -webkit-appearance: button;
-}
-
 textarea {
-  overflow: auto;
   resize: vertical;
-}
-
-[hidden] {
-  display: none !important;
 }
 
 ul {
@@ -135,7 +117,6 @@ header nav {
 
 header nav a {
   color: #fff;
-  text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -153,8 +134,8 @@ header nav a.active {
   align-items: center;
   justify-content: center;
   padding: 3rem 1rem;
-  background: linear-gradient(rgba(0,64,128,0.7), rgba(0,64,128,0.7)),
-              url('../images/mycity.png') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 64, 128, 0.7), rgba(0, 64, 128, 0.7)),
+    url('../images/mycity.png') center/cover no-repeat;
   color: #fff;
   text-align: center;
 }
@@ -176,7 +157,6 @@ header nav a.active {
   color: #004080;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
-  text-decoration: none;
   font-weight: bold;
   transition: background 0.3s ease;
 }
@@ -192,11 +172,6 @@ main section {
   padding: 2rem 1rem;
   max-width: 1000px;
   margin: auto;
-}
-
-h2 {
-  margin-bottom: 1rem;
-  color: #004080;
 }
 
 .events li {
@@ -222,9 +197,7 @@ h2 {
   padding: 0.5rem 1rem;
   background: #004080;
   color: #fff;
-  border: none;
   border-radius: 4px;
-  cursor: pointer;
 }
 
 .view-toggle button:hover {
@@ -263,7 +236,7 @@ h2 {
   background: #fff;
   padding: 2rem;
   border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .join-page label {
@@ -284,7 +257,6 @@ h2 {
   background: #004080;
   color: #fff;
   padding: 0.75rem;
-  border: none;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -317,9 +289,8 @@ h2 {
   margin-top: 1rem;
   background: #ffd700;
   color: #004080;
-  border: none;
-  padding: 0.5rem 1rem;
   border-radius: 4px;
+  padding: 0.5rem 1rem;
   cursor: pointer;
 }
 
@@ -334,14 +305,7 @@ h2 {
   display: grid;
   gap: 1rem;
   grid-template-areas:
-    "a"
-    "b"
-    "c"
-    "d"
-    "e"
-    "f"
-    "g"
-    "h";
+    "a" "b" "c" "d" "e" "f" "g" "h";
 }
 
 .attraction {
@@ -355,24 +319,25 @@ h2 {
   animation: cardFadeIn 0.8s ease forwards;
 }
 
+/* Make all attraction text green */
+.attraction h2,
+.attraction address,
+.attraction p,
+.attraction figcaption {
+  color: green;
+}
+
 .attraction figure {
   margin: 0;
 }
 
 .attraction img {
   width: 100%;
-  height: auto;
   border-radius: 6px;
-}
-
-.attraction h2 {
-  color: #004080;
-  margin-top: 0.5rem;
 }
 
 .attraction address {
   font-style: normal;
-  color: #555;
   margin: 0.5rem 0;
 }
 
@@ -380,10 +345,8 @@ h2 {
   margin-top: 1rem;
   background: #ffd700;
   color: #004080;
-  border: none;
-  padding: 0.5rem 1rem;
   border-radius: 4px;
-  cursor: pointer;
+  padding: 0.5rem 1rem;
   font-weight: bold;
 }
 
@@ -391,29 +354,78 @@ h2 {
   background: #ffb700;
 }
 
-/* Hover effect (desktop only) */
-@media (hover: hover) {
-  .attraction:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Medium screens */
+@media (hover: hover) {
+  .attraction:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
 @media (min-width: 641px) {
   .attractions-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-      "a b"
-      "c d"
-      "e f"
-      "g h";
+      "a b" "c d" "e f" "g h";
   }
 }
 
-/* Large screens */
 @media (min-width: 1025px) {
   .attractions-grid {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
-      "a b c
+      "a b c d" "e f g h";
+  }
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background: #fff;
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.4s ease;
+}
+
+.modal-content img {
+  max-width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.modal-content h2 {
+  color: #004080;
+  margin-bottom: 0.5rem;
+}
+
+.modal-content p {
+  margin: 1rem 0;
+}
+
+.modal-content address {
+  font

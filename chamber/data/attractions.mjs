@@ -1,17 +1,17 @@
 export const attractions = [
   {
     "name": "National Museum Lagos",
+    "image": "images/the_museum.jpg",
     "address": "Onikan Rd, Lagos Island",
     "description": "Explore Nigeria’s rich cultural heritage and artifacts.",
-    "image": "images/the_museum.jpg",
-    "url": "https://media-cdn.tripadvisor.com/media/photo-s/0d/c0/4f/3b/the-museum.jpg"
+    "url": "https://museum.ng/"
   },
   {
     "name": "Lekki Conservation Centre",
     "address": "Lekki Peninsula, Lagos",
     "description": "Walk the longest canopy bridge in Africa and enjoy wildlife.",
     "image": "images/Lekki_Conservation_Centre.png",
-    "url": "https://sabiabuja.com/wp-content/uploads/2024/08/Lekki-Conservation-Centre.png"
+    "url": "https://www.tripadvisor.com/Attraction_Products-g304026-d2305113-Lekki_Conservation_Centre-Lagos_Lagos_State.html"
   },
   {
     "name": "Nike Art Gallery",

@@ -3,6 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Meta description (50–160 chars) -->
+  <meta name="description" content="Discover Lagos attractions with the Lagos Chamber of Commerce. Explore culture, history, and modern highlights across the city." />
+
+  <!-- Meta author -->
+  <meta name="author" content="Olalemi Emmanuel" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="Discover Lagos - Lagos Chamber of Commerce" />
+  <meta property="og:description" content="Explore 8 attractions in Lagos including museums, beaches, art galleries, and more. Plan your visit with the Lagos Chamber of Commerce." />
+  <meta property="og:image" content="https://olaxemax.github.io/wdd231/chamber/images/mycity.png" />
+  <meta property="og:url" content="https://olaxemax.github.io/wdd231/chamber/discover.html" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
   <title>Lagos Chamber of Commerce | Discover</title>
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/styles.css" />
@@ -18,6 +39,8 @@
     </nav>
   </header>
 
+  <button id="darkModeToggle">🌙 Dark Mode</button>
+  
   <main class="discover-page">
     <h1>Discover Lagos</h1>
     <p id="visitor-message"></p>
@@ -45,7 +68,8 @@
   </div>
 
   <!-- Scripts -->
-  <!-- IMPORTANT: use a separate JS file for clarity -->
+   <script src="scripts/script.js"></script>
+  <script src="scripts/darkmode.js"></script>
   <script type="module" src="scripts/discover.js"></script>
 </body>
 </html>
