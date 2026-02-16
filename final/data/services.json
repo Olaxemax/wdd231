@@ -1,0 +1,7 @@
+{
+  "services": [
+    { "name": "Bright Tutors", "type": "Education", "contact": "info@brighttutors.com", "description": "Affordable tutoring for all grade levels." },
+    { "name": "Fix-It Plumbing", "type": "Home Services", "contact": "555-1234", "description": "Reliable plumbing services for your home or business." },
+    { "name": "Green Gym", "type": "Fitness", "contact": "contact@greengym.com", "description": "Eco-friendly fitness center with modern equipment." }
+  ]
+}
