@@ -1,7 +1,107 @@
-{
-  "services": [
-    { "name": "Bright Tutors", "type": "Education", "contact": "info@brighttutors.com", "description": "Affordable tutoring for all grade levels." },
-    { "name": "Fix-It Plumbing", "type": "Home Services", "contact": "555-1234", "description": "Reliable plumbing services for your home or business." },
-    { "name": "Green Gym", "type": "Fitness", "contact": "contact@greengym.com", "description": "Eco-friendly fitness center with modern equipment." }
-  ]
-}
+[
+  {
+    "id": "bright-tutors",
+    "name": "Bright Tutors",
+    "type": "Education",
+    "contact": "info@brighttutors.com",
+    "description": "Affordable tutoring for all grade levels."
+  },
+  {
+    "id": "green-cleaners",
+    "name": "Green Cleaners",
+    "type": "Cleaning",
+    "contact": "contact@greencleaners.com",
+    "description": "Eco-friendly home and office cleaning services."
+  },
+  {
+    "id": "city-gym",
+    "name": "City Gym",
+    "type": "Fitness",
+    "contact": "support@citygym.com",
+    "description": "Modern gym facilities with personal trainers."
+  },
+  {
+    "id": "fresh-bites",
+    "name": "Fresh Bites Catering",
+    "type": "Food",
+    "contact": "orders@freshbites.com",
+    "description": "Healthy catering for events and parties."
+  },
+  {
+    "id": "tech-fix",
+    "name": "TechFix Solutions",
+    "type": "IT Services",
+    "contact": "help@techfix.com",
+    "description": "Computer and mobile device repair services."
+  },
+  {
+    "id": "happy-paws",
+    "name": "Happy Paws Veterinary",
+    "type": "Health",
+    "contact": "info@happypaws.com",
+    "description": "Comprehensive pet care and veterinary services."
+  },
+  {
+    "id": "urban-taxi",
+    "name": "Urban Taxi",
+    "type": "Transport",
+    "contact": "ride@urbantaxi.com",
+    "description": "Reliable taxi and ride-hailing services."
+  },
+  {
+    "id": "style-hub",
+    "name": "Style Hub Salon",
+    "type": "Beauty",
+    "contact": "bookings@stylehub.com",
+    "description": "Hair styling, spa, and beauty treatments."
+  },
+  {
+    "id": "fix-it",
+    "name": "Fix-It Handyman",
+    "type": "Home Services",
+    "contact": "service@fixit.com",
+    "description": "General home repairs and maintenance."
+  },
+  {
+    "id": "smart-learn",
+    "name": "SmartLearn Academy",
+    "type": "Education",
+    "contact": "info@smartlearn.com",
+    "description": "Online courses and skill development programs."
+  },
+  {
+    "id": "city-clinic",
+    "name": "City Clinic",
+    "type": "Health",
+    "contact": "appointments@cityclinic.com",
+    "description": "Primary healthcare and specialist consultations."
+  },
+  {
+    "id": "event-pros",
+    "name": "Event Pros",
+    "type": "Event Management",
+    "contact": "plan@eventpros.com",
+    "description": "Professional event planning and coordination."
+  },
+  {
+    "id": "safe-bank",
+    "name": "SafeBank",
+    "type": "Finance",
+    "contact": "support@safebank.com",
+    "description": "Secure banking and financial services."
+  },
+  {
+    "id": "eco-rentals",
+    "name": "Eco Rentals",
+    "type": "Transport",
+    "contact": "rent@ecorentals.com",
+    "description": "Electric car and bike rentals."
+  },
+  {
+    "id": "bright-smiles",
+    "name": "Bright Smiles Dental",
+    "type": "Health",
+    "contact": "info@brightsmiles.com",
+    "description": "Dental care and orthodontic services."
+  }
+]

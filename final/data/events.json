@@ -1,0 +1,122 @@
+[
+  {
+    "id": "community-fair",
+    "title": "Community Fair",
+    "date": "2026-03-01",
+    "location": "Town Square",
+    "category": "Festival",
+    "description": "A fun day with local vendors, food stalls, and live music."
+  },
+  {
+    "id": "tech-conference",
+    "title": "Tech Conference 2026",
+    "date": "2026-04-15",
+    "location": "Convention Center",
+    "category": "Conference",
+    "description": "Industry leaders discuss the future of technology."
+  },
+  {
+    "id": "farmers-market",
+    "title": "Weekly Farmers Market",
+    "date": "2026-02-22",
+    "location": "Central Park",
+    "category": "Market",
+    "description": "Fresh produce and handmade goods from local farmers."
+  },
+  {
+    "id": "art-exhibit",
+    "title": "Local Art Exhibit",
+    "date": "2026-05-10",
+    "location": "City Gallery",
+    "category": "Exhibition",
+    "description": "Showcasing works from emerging artists."
+  },
+  {
+    "id": "music-festival",
+    "title": "Summer Music Festival",
+    "date": "2026-06-20",
+    "location": "Riverside Grounds",
+    "category": "Festival",
+    "description": "Live performances from local and international bands."
+  },
+  {
+    "id": "charity-run",
+    "title": "Charity 5K Run",
+    "date": "2026-07-05",
+    "location": "City Stadium",
+    "category": "Sports",
+    "description": "Fundraising run for community health initiatives."
+  },
+  {
+    "id": "book-fair",
+    "title": "Annual Book Fair",
+    "date": "2026-08-12",
+    "location": "Library Hall",
+    "category": "Education",
+    "description": "Discover new authors and attend book signings."
+  },
+  {
+    "id": "food-festival",
+    "title": "Taste of MyTown",
+    "date": "2026-09-01",
+    "location": "Downtown Plaza",
+    "category": "Festival",
+    "description": "Local restaurants showcase their best dishes."
+  },
+  {
+    "id": "film-night",
+    "title": "Outdoor Film Night",
+    "date": "2026-09-15",
+    "location": "Community Park",
+    "category": "Entertainment",
+    "description": "Family-friendly movies under the stars."
+  },
+  {
+    "id": "career-fair",
+    "title": "Career Fair",
+    "date": "2026-10-10",
+    "location": "University Hall",
+    "category": "Education",
+    "description": "Meet employers and explore job opportunities."
+  },
+  {
+    "id": "science-expo",
+    "title": "Science Expo",
+    "date": "2026-11-05",
+    "location": "Innovation Hub",
+    "category": "Exhibition",
+    "description": "Interactive exhibits and STEM workshops."
+  },
+  {
+    "id": "holiday-market",
+    "title": "Holiday Market",
+    "date": "2026-12-01",
+    "location": "Town Square",
+    "category": "Market",
+    "description": "Seasonal crafts, gifts, and festive foods."
+  },
+  {
+    "id": "new-year-concert",
+    "title": "New Year Concert",
+    "date": "2026-12-31",
+    "location": "City Amphitheater",
+    "category": "Entertainment",
+    "description": "Ring in the new year with live music."
+  },
+  {
+    "id": "wellness-workshop",
+    "title": "Wellness Workshop",
+    "date": "2026-03-20",
+    "location": "Community Center",
+    "category": "Health",
+    "description": "Learn techniques for stress management and healthy living."
+  },
+  {
+    "id": "coding-bootcamp",
+    "title": "Coding Bootcamp",
+    "date": "2026-04-01",
+    "location": "Tech Hub",
+    "category": "Education",
+    "description": "Intensive training for aspiring developers."
+  }
+]

@@ -116,3 +116,122 @@ footer {
 footer a {
   color: #10B981;
 }
+
+/* Success Page Styling - Desktop */
+body.success-page {
+  background: linear-gradient(135deg, #10B981, #1E3A8A);
+  color: #fff;
+}
+
+.success-page header h1 {
+  color: #FFD700; /* gold accent */
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  text-align: center;
+  margin-top: 30px;
+}
+
+.success-page main section {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #37474F;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.success-page #form-data ul {
+  list-style: none;
+  padding: 0;
+}
+
+.success-page #form-data li {
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+/* Back Link styled as button */
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #1E3A8A;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+  background-color: #10B981;
+}
+
+/* Contact Form Styling - Desktop */
+.contact-form {
+  max-width: 600px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1E3A8A;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #10B981;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.4);
+  outline: none;
+}
+
+.contact-form button {
+  background-color: #1E3A8A;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #10B981;
+  transform: translateY(-2px);
+}
+
+/* Show More Button */
+.show-more-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1E3A8A;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.show-more-btn:hover {
+  background-color: #10B981;
+  transform: translateY(-2px);
+}

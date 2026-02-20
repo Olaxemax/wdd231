@@ -4,19 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services - MyTown Connect</title>
+
+  <!-- Responsive CSS -->
   <link rel="stylesheet" href="styles/small.css" media="screen and (max-width: 768px)">
   <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 769px)">
 
+  <!-- Favicon -->
   <link rel="icon" href="images/abcn.png" type="image/x-icon">
 
   <!-- Open Graph Meta -->
   <meta property="og:title" content="MyTown Connect - Discover Local Events and Services">
   <meta property="og:description" content="Discover local events, businesses, and resources in your community. Stay connected and engaged with what's happening around you.">
-  <meta property="og:url" content="https://olaxemax.github.io/final/index.html">
+  <meta property="og:url" content="https://olaxemax.github.io/final/services.html">
   <meta property="og:image" content="https://olaxemax.github.io/final/images/abc.jpg">
-  <meta property="og:type" content="facebook.com">
+  <meta property="og:type" content="website">
 </head>
-<body>
+<body class="services-page">
   <header>
     <nav>
       <a href="index.html" class="logo">MyTown Connect</a>
@@ -24,7 +27,7 @@
       <ul id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="events.html">Events</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -36,10 +39,8 @@
 
   <main>
     <section class="featured">
-      <h2>Community Services</h2>
-      <div id="services-list">
-        <!-- Dynamic service cards will be injected here by services.js -->
-      </div>
+      <h2>All Services</h2>
+      <div id="featured-services"></div>
     </section>
   </main>
 
@@ -48,7 +49,7 @@
     <p><a href="https://your-video-link.com" target="_blank">Project Demo Video</a></p>
   </footer>
 
-  <script type="module" src="scripts/services.js"></script>
+  <!-- Only load main.js as module -->
   <script type="module" src="scripts/main.js"></script>
 </body>
 </html>

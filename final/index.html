@@ -17,15 +17,15 @@
   <meta property="og:description" content="Discover local events, businesses, and resources in your community. Stay connected and engaged with what's happening around you.">
   <meta property="og:url" content="https://olaxemax.github.io/final/index.html">
   <meta property="og:image" content="https://olaxemax.github.io/final/images/abc.jpg">
-  <meta property="og:type" content="facebook.com">
+  <meta property="og:type" content="website">
 </head>
-<body>
+<body class="home-page">
   <header>
     <nav>
       <a href="index.html" class="logo">MyTown Connect</a>
       <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
       <ul id="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -43,21 +43,24 @@
   </header>
 
   <main>
+    <!-- Featured Events -->
     <section class="featured">
       <h2>Featured Events</h2>
-      <div id="featured-events">
-        <!-- Dynamic event cards will be injected here by events.js -->
-      </div>
+      <div id="featured-events"></div>
+      <p style="text-align:center; margin-top:20px;">
+        <a href="events.html" class="show-more-btn">Show More Events →</a>
+      </p>
     </section>
 
+    <!-- Featured Services -->
     <section class="featured">
       <h2>Featured Services</h2>
-      <div id="featured-services">
-        <!-- Dynamic service cards will be injected here by services.js -->
-      </div>
+      <div id="featured-services"></div>
+      <p style="text-align:center; margin-top:20px;">
+        <a href="services.html" class="show-more-btn">Show More Services →</a>
+      </p>
     </section>
   </main>
-
 
   <footer>
     <p>&copy; 2026 MyTown Connect | <a href="resources.html">Attributions</a></p>

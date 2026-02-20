@@ -1,26 +1,35 @@
 // services.js
 
-export async function loadFeaturedServices() {
+export async function loadFeaturedServices(limit = 15) {
   try {
-    const response = await fetch('data/services.json');
-    if (!response.ok) throw new Error('Failed to fetch services data');
+    const response = await fetch('./data/services.json');
+    if (!response.ok) throw new Error("Failed to load services data");
 
-    const data = await response.json();
-    const servicesContainer = document.getElementById('featured-services');
+    const services = await response.json();
+    const container = document.getElementById('featured-services');
+    container.innerHTML = "";
 
-    // Display first 3 services as "featured"
-    data.services.slice(0, 3).forEach(service => {
-      const card = document.createElement('div');
-      card.classList.add('card');
-      card.innerHTML = `
-        <h3>${service.name}</h3>
-        <p><strong>Type:</strong> ${service.type}</p>
-        <p><strong>Contact:</strong> ${service.contact}</p>
-        <p>${service.description}</p>
-      `;
-      servicesContainer.appendChild(card);
-    });
+    services
+      .map(service => ({
+        ...service,
+        displayName: service.name.toUpperCase()
+      }))
+      .slice(0, limit)
+      .forEach(service => {
+        const card = document.createElement('article');
+        card.classList.add('card');
+
+        card.innerHTML = `
+          <h3>${service.displayName}</h3>
+          <p><strong>Type:</strong> ${service.type}</p>
+          <p><strong>Contact:</strong> ${service.contact}</p>
+          <p>${service.description}</p>
+          <button class="favorite-btn" data-id="${service.id}" data-type="service">⭐ Favorite</button>
+        `;
+
+        container.appendChild(card);
+      });
   } catch (error) {
-    console.error('Error loading services:', error);
+    console.error("Error loading services:", error);
   }
 }

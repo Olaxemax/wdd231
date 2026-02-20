@@ -1,19 +1,27 @@
-
+// main.js
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');
 
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-});
+if (menuToggle) {
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+}
 
 import { loadFeaturedEvents } from './events.js';
 import { loadFeaturedServices } from './services.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (document.getElementById('featured-events')) {
-    loadFeaturedEvents();
+  if (document.body.classList.contains('home-page')) {
+    loadFeaturedEvents(3);
+    loadFeaturedServices(3);
   }
-  if (document.getElementById('featured-services')) {
-    loadFeaturedServices();
+
+  if (document.body.classList.contains('events-page')) {
+    loadFeaturedEvents(15);
+  }
+
+  if (document.body.classList.contains('services-page')) {
+    loadFeaturedServices(15);
   }
 });
